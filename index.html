@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>ToDo</title>
+  </head>
+  <body>
+    <header>
+      <h1>Todo</h1>
+    </header>
+
+    <main>
+      <div>
+        <table class="table" border="1">
+          <tr class="itemTodo">
+            <th>Дата постановки</th>
+            <th>Дата завершения</th>
+            <th>Категория</th>
+            <th>Задача</th>
+            <th>Done</th>
+          </tr>
+
+          <tr class="inputTodo">
+            <td>
+              <input
+                type="date"
+                name="calendar"
+                class="dateStart"
+                id="dateStart"
+              />
+            </td>
+            <td>
+              <input type="date" name="calendar" class="dateEnd" id="dateEnd" />
+            </td>
+            <td><input type="text" class="category" id="category" /></td>
+            <td><input type="text" class="task" id="task" /></td>
+            <td></td>
+            <td>
+              <input
+                type="button"
+                value="Добавить"
+                class="addButton"
+                id="addButton"
+              />
+            </td>
+          </tr>
+        </table>
+
+        <div class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <table class="table" border="1">
+              <tr class="itemTodo">
+                <th>Дата постановки</th>
+                <th>Дата завершения</th>
+                <th>Категория</th>
+                <th>Задача</th>
+                <th>Done</th>
+              </tr>
+              <tr class="modal-content-todo"></tr>
+            </table>
+            <input type="button" value="Сохранить" class="save" id="save" />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="todo.js"></script>
+    <!-- <script src="todo.js"></script> -->
+  </body>
+</html>
